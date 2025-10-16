@@ -21,7 +21,7 @@ The robot can be placed, moved, rotated, and can report its current position.
 
 ## 💡 Example Usage
 ```bash
-- PLACE 0,0,NORTH
+- PLACE 1,1,NORTH
 - MOVE
 - RIGHT
 - MOVE
@@ -30,11 +30,50 @@ The robot can be placed, moved, rotated, and can report its current position.
 
 ### 🖨️ Expected Output
 ```bash
-- Placed at 0,0,NORTH
-- Moved to 0,1
-- Turned right. Now facing EAST
-- Moved to 1,1
-- Output: 1,1,EAST
+· · · · ·  | 5
+· · · · ·  | 4
+· · · · ·  | 3
+· · · · ·  | 2
+· · · · ↑  | 1
+5 4 3 2 1
+
+Legend: ↑=NORTH, →=EAST, ↓=SOUTH, ←=WEST
+
+
+· · · · ·  | 5
+· · · · ·  | 4
+· · · · ·  | 3
+· · · · ↑  | 2
+· · · · ·  | 1
+5 4 3 2 1
+
+Legend: ↑=NORTH, →=EAST, ↓=SOUTH, ←=WEST
+
+
+· · · · ·  | 5
+· · · · ·  | 4
+· · · · ·  | 3
+· · · · →  | 2
+· · · · ·  | 1
+5 4 3 2 1
+
+Legend: ↑=NORTH, →=EAST, ↓=SOUTH, ←=WEST
+
+
+- Move ignored to prevent falling off the table.
+
+
+· · · · ·  | 5
+· · · · ·  | 4
+· · · · ·  | 3
+· · · · →  | 2
+· · · · ·  | 1
+5 4 3 2 1
+
+Legend: ↑=NORTH, →=EAST, ↓=SOUTH, ←=WEST
+
+Output: 1,2,EAST
+
 ```
 ---
 
